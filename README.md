@@ -114,3 +114,7 @@ rm ~/.claude/commands/socratic-{on,off,log,review,status}.md
 ```
 
 These remove only the symlinks; the repo and your journal are untouched. Also remove the "Teaching Mode: Socratic Building" section from your `~/.claude/CLAUDE.md` if you added it.
+
+## License
+
+[MIT](LICENSE)
