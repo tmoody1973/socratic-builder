@@ -1,0 +1,529 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-27T00:03:20.994Z",
+  "title": "Design System: Socratic Builder Learning Log",
+  "extensions": {
+    "colorMeta": {
+      "stock": {
+        "role": "neutral",
+        "displayName": "Inlay Stock",
+        "canonical": "oklch(98.8% 0.005 95.1)",
+        "tonalRamp": [
+          "oklch(15% 0.005 95.1)",
+          "oklch(26% 0.005 95.1)",
+          "oklch(38% 0.005 95.1)",
+          "oklch(50% 0.005 95.1)",
+          "oklch(62% 0.005 95.1)",
+          "oklch(74% 0.005 95.1)",
+          "oklch(85% 0.005 95.1)",
+          "oklch(95% 0.005 95.1)"
+        ],
+        "mode": "light",
+        "cssVar": "--stock",
+        "note": "Print forces #fff."
+      },
+      "stock-deep": {
+        "role": "neutral",
+        "displayName": "Deep Stock",
+        "canonical": "oklch(95.8% 0.01 93.6)",
+        "tonalRamp": [
+          "oklch(15% 0.01 93.6)",
+          "oklch(26% 0.01 93.6)",
+          "oklch(38% 0.01 93.6)",
+          "oklch(50% 0.01 93.6)",
+          "oklch(62% 0.01 93.6)",
+          "oklch(74% 0.01 93.6)",
+          "oklch(85% 0.01 93.6)",
+          "oklch(95% 0.01 93.6)"
+        ],
+        "mode": "light",
+        "cssVar": "--stock-deep"
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Blue Rule",
+        "canonical": "oklch(92.4% 0.02 264.5)",
+        "tonalRamp": [
+          "oklch(15% 0.02 264.5)",
+          "oklch(26% 0.02 264.5)",
+          "oklch(38% 0.02 264.5)",
+          "oklch(50% 0.02 264.5)",
+          "oklch(62% 0.02 264.5)",
+          "oklch(74% 0.02 264.5)",
+          "oklch(85% 0.02 264.5)",
+          "oklch(95% 0.02 264.5)"
+        ],
+        "mode": "light",
+        "cssVar": "--rule",
+        "note": "Print forces #e3e8f3."
+      },
+      "ink": {
+        "role": "primary",
+        "displayName": "Ballpoint Blue",
+        "canonical": "oklch(37.9% 0.138 265.5)",
+        "tonalRamp": [
+          "oklch(15% 0.138 265.5)",
+          "oklch(26% 0.138 265.5)",
+          "oklch(38% 0.138 265.5)",
+          "oklch(50% 0.138 265.5)",
+          "oklch(62% 0.138 265.5)",
+          "oklch(74% 0.138 265.5)",
+          "oklch(85% 0.138 265.5)",
+          "oklch(95% 0.138 265.5)"
+        ],
+        "mode": "light",
+        "cssVar": "--ink"
+      },
+      "ink-strong": {
+        "role": "primary",
+        "displayName": "Pressed Ink",
+        "canonical": "oklch(31.7% 0.114 265.2)",
+        "tonalRamp": [
+          "oklch(15% 0.114 265.2)",
+          "oklch(26% 0.114 265.2)",
+          "oklch(38% 0.114 265.2)",
+          "oklch(50% 0.114 265.2)",
+          "oklch(62% 0.114 265.2)",
+          "oklch(74% 0.114 265.2)",
+          "oklch(85% 0.114 265.2)",
+          "oklch(95% 0.114 265.2)"
+        ],
+        "mode": "light",
+        "cssVar": "--ink-strong"
+      },
+      "ink-soft": {
+        "role": "primary",
+        "displayName": "Faded Ink",
+        "canonical": "oklch(51.3% 0.11 267.6)",
+        "tonalRamp": [
+          "oklch(15% 0.11 267.6)",
+          "oklch(26% 0.11 267.6)",
+          "oklch(38% 0.11 267.6)",
+          "oklch(50% 0.11 267.6)",
+          "oklch(62% 0.11 267.6)",
+          "oklch(74% 0.11 267.6)",
+          "oklch(85% 0.11 267.6)",
+          "oklch(95% 0.11 267.6)"
+        ],
+        "mode": "light",
+        "cssVar": "--ink-soft"
+      },
+      "pencil": {
+        "role": "neutral",
+        "displayName": "Pencil",
+        "canonical": "oklch(49.6% 0.024 267.1)",
+        "tonalRamp": [
+          "oklch(15% 0.024 267.1)",
+          "oklch(26% 0.024 267.1)",
+          "oklch(38% 0.024 267.1)",
+          "oklch(50% 0.024 267.1)",
+          "oklch(62% 0.024 267.1)",
+          "oklch(74% 0.024 267.1)",
+          "oklch(85% 0.024 267.1)",
+          "oklch(95% 0.024 267.1)"
+        ],
+        "mode": "light",
+        "cssVar": "--pencil",
+        "note": "Print forces #444."
+      },
+      "stripe": {
+        "role": "secondary",
+        "displayName": "Printed Red",
+        "canonical": "oklch(53.9% 0.194 26.7)",
+        "tonalRamp": [
+          "oklch(15% 0.16 26.7)",
+          "oklch(26% 0.16 26.7)",
+          "oklch(38% 0.16 26.7)",
+          "oklch(50% 0.16 26.7)",
+          "oklch(62% 0.16 26.7)",
+          "oklch(74% 0.16 26.7)",
+          "oklch(85% 0.16 26.7)",
+          "oklch(95% 0.16 26.7)"
+        ],
+        "mode": "light",
+        "cssVar": "--stripe",
+        "note": "Print forces #b71c1c."
+      },
+      "on-ink": {
+        "role": "neutral",
+        "displayName": "On Ink",
+        "canonical": "oklch(98.8% 0.005 95.1)",
+        "tonalRamp": [
+          "oklch(15% 0.005 95.1)",
+          "oklch(26% 0.005 95.1)",
+          "oklch(38% 0.005 95.1)",
+          "oklch(50% 0.005 95.1)",
+          "oklch(62% 0.005 95.1)",
+          "oklch(74% 0.005 95.1)",
+          "oklch(85% 0.005 95.1)",
+          "oklch(95% 0.005 95.1)"
+        ],
+        "mode": "light",
+        "cssVar": "--on-ink"
+      },
+      "stock-dark": {
+        "role": "neutral",
+        "displayName": "Night Stock",
+        "canonical": "oklch(20.6% 0.041 269.9)",
+        "tonalRamp": [
+          "oklch(15% 0.041 269.9)",
+          "oklch(26% 0.041 269.9)",
+          "oklch(38% 0.041 269.9)",
+          "oklch(50% 0.041 269.9)",
+          "oklch(62% 0.041 269.9)",
+          "oklch(74% 0.041 269.9)",
+          "oklch(85% 0.041 269.9)",
+          "oklch(95% 0.041 269.9)"
+        ],
+        "mode": "dark",
+        "cssVar": "--stock"
+      },
+      "stock-deep-dark": {
+        "role": "neutral",
+        "displayName": "Deep Night Stock",
+        "canonical": "oklch(17.7% 0.034 269.6)",
+        "tonalRamp": [
+          "oklch(15% 0.034 269.6)",
+          "oklch(26% 0.034 269.6)",
+          "oklch(38% 0.034 269.6)",
+          "oklch(50% 0.034 269.6)",
+          "oklch(62% 0.034 269.6)",
+          "oklch(74% 0.034 269.6)",
+          "oklch(85% 0.034 269.6)",
+          "oklch(95% 0.034 269.6)"
+        ],
+        "mode": "dark",
+        "cssVar": "--stock-deep"
+      },
+      "rule-dark": {
+        "role": "neutral",
+        "displayName": "Night Rule",
+        "canonical": "oklch(27.9% 0.056 268.3)",
+        "tonalRamp": [
+          "oklch(15% 0.056 268.3)",
+          "oklch(26% 0.056 268.3)",
+          "oklch(38% 0.056 268.3)",
+          "oklch(50% 0.056 268.3)",
+          "oklch(62% 0.056 268.3)",
+          "oklch(74% 0.056 268.3)",
+          "oklch(85% 0.056 268.3)",
+          "oklch(95% 0.056 268.3)"
+        ],
+        "mode": "dark",
+        "cssVar": "--rule"
+      },
+      "ink-dark": {
+        "role": "primary",
+        "displayName": "Faded Blue Ink (night)",
+        "canonical": "oklch(80.2% 0.079 268.5)",
+        "tonalRamp": [
+          "oklch(15% 0.079 268.5)",
+          "oklch(26% 0.079 268.5)",
+          "oklch(38% 0.079 268.5)",
+          "oklch(50% 0.079 268.5)",
+          "oklch(62% 0.079 268.5)",
+          "oklch(74% 0.079 268.5)",
+          "oklch(85% 0.079 268.5)",
+          "oklch(95% 0.079 268.5)"
+        ],
+        "mode": "dark",
+        "cssVar": "--ink"
+      },
+      "ink-strong-dark": {
+        "role": "primary",
+        "displayName": "Pressed Ink (night)",
+        "canonical": "oklch(90.1% 0.039 268)",
+        "tonalRamp": [
+          "oklch(15% 0.039 268)",
+          "oklch(26% 0.039 268)",
+          "oklch(38% 0.039 268)",
+          "oklch(50% 0.039 268)",
+          "oklch(62% 0.039 268)",
+          "oklch(74% 0.039 268)",
+          "oklch(85% 0.039 268)",
+          "oklch(95% 0.039 268)"
+        ],
+        "mode": "dark",
+        "cssVar": "--ink-strong"
+      },
+      "ink-soft-dark": {
+        "role": "primary",
+        "displayName": "Faded Ink (night)",
+        "canonical": "oklch(68% 0.096 268.2)",
+        "tonalRamp": [
+          "oklch(15% 0.096 268.2)",
+          "oklch(26% 0.096 268.2)",
+          "oklch(38% 0.096 268.2)",
+          "oklch(50% 0.096 268.2)",
+          "oklch(62% 0.096 268.2)",
+          "oklch(74% 0.096 268.2)",
+          "oklch(85% 0.096 268.2)",
+          "oklch(95% 0.096 268.2)"
+        ],
+        "mode": "dark",
+        "cssVar": "--ink-soft"
+      },
+      "pencil-dark": {
+        "role": "neutral",
+        "displayName": "Pencil (night)",
+        "canonical": "oklch(71.5% 0.032 267.1)",
+        "tonalRamp": [
+          "oklch(15% 0.032 267.1)",
+          "oklch(26% 0.032 267.1)",
+          "oklch(38% 0.032 267.1)",
+          "oklch(50% 0.032 267.1)",
+          "oklch(62% 0.032 267.1)",
+          "oklch(74% 0.032 267.1)",
+          "oklch(85% 0.032 267.1)",
+          "oklch(95% 0.032 267.1)"
+        ],
+        "mode": "dark",
+        "cssVar": "--pencil"
+      },
+      "stripe-dark": {
+        "role": "secondary",
+        "displayName": "Coral Stripe (night)",
+        "canonical": "oklch(69.7% 0.159 26.5)",
+        "tonalRamp": [
+          "oklch(15% 0.159 26.5)",
+          "oklch(26% 0.159 26.5)",
+          "oklch(38% 0.159 26.5)",
+          "oklch(50% 0.159 26.5)",
+          "oklch(62% 0.159 26.5)",
+          "oklch(74% 0.159 26.5)",
+          "oklch(85% 0.159 26.5)",
+          "oklch(95% 0.159 26.5)"
+        ],
+        "mode": "dark",
+        "cssVar": "--stripe"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Log title and Confidence check page title; uppercase."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Lesson title on the j-card front flap; uppercase."
+      },
+      "quote": {
+        "displayName": "Quote",
+        "purpose": "The learner's own 'In my words' sentence; the hand's one mixed-case use."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Side (month) heads on the shelf; face heads at 1.45rem."
+      },
+      "track": {
+        "displayName": "Track",
+        "purpose": "Lesson titles in the tracklist."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Dates, tally, nav, section heads, tag labels, footer; 1.05 to 1.35rem, uppercase."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "All running text, sitting on the 1.75rem rules."
+      },
+      "body-large": {
+        "displayName": "Body Large",
+        "purpose": "Side A / Side B sentences and the recall question; Side A italic."
+      }
+    },
+    "fonts": [
+      {
+        "family": "Inked",
+        "source": "Patrick Hand 400, self-hosted woff2 (skill/site/fonts), OFL"
+      },
+      {
+        "family": "Reader",
+        "source": "Atkinson Hyperlegible 400, 400 italic, 700, self-hosted woff2 (skill/site/fonts), OFL"
+      }
+    ],
+    "background": {
+      "name": "ruled-stock",
+      "value": "repeating-linear-gradient(to bottom, transparent 0 calc(var(--line) - 1px), var(--rule) calc(var(--line) - 1px) var(--line))",
+      "purpose": "Lined inlay stock; pitch equals body line-height."
+    },
+    "shadows": [
+      {
+        "name": "flip-lift",
+        "value": "0 3px 10px -4px rgba(21, 44, 107, 0.55)",
+        "purpose": "Flip button only; the one lifted element."
+      },
+      {
+        "name": "inked-line-focus",
+        "value": "0 2px 0 var(--ink-strong)",
+        "purpose": "Doubles the search underline on focus."
+      }
+    ],
+    "focus": {
+      "value": "outline: 2px solid var(--focus); outline-offset: 3px; border-radius: 3px",
+      "purpose": "Global :focus-visible ring; --focus equals ink-strong in each mode."
+    },
+    "motion": [
+      {
+        "name": "side-flip",
+        "value": "transform 650ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Y-axis card turn between Side A and Side B, perspective 1400px. Reduced motion: none (instant swap)."
+      },
+      {
+        "name": "unseal",
+        "value": "420ms cubic-bezier(0.16, 1, 0.3, 1); from opacity 0, translateY(8px), blur(3px)",
+        "purpose": "Reveals 'In my words' after the first flip. Reduced motion: none."
+      },
+      {
+        "name": "state",
+        "value": "160ms ease-out",
+        "purpose": "Background/colour/transform on tracks, tag labels and the Flip button. Reduced motion: none."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact",
+        "value": "max-width: 40rem",
+        "purpose": "Rail narrows to 2.6rem, card spine and A/B box hidden, leaders removed, j-card stacks."
+      }
+    ],
+    "modes": [
+      {
+        "name": "dark",
+        "query": "prefers-color-scheme: dark",
+        "purpose": "Night stock: *-dark color tokens."
+      },
+      {
+        "name": "print",
+        "query": "print",
+        "purpose": "White stock, #444 pencil, #b71c1c stripe, #e3e8f3 rules; spine, finder, flip hidden; both sides laid flat."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Flip Button",
+      "kind": "button",
+      "refersTo": "button-flip",
+      "description": "The one filled control: turns the j-card from Side A to Side B.",
+      "html": "<button class=\"ds-flip\" type=\"button\" aria-pressed=\"false\"><svg viewBox=\"0 0 24 24\" width=\"21\" height=\"21\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M4 9a8 8 0 0 1 14-3l2 2M20 15a8 8 0 0 1-14 3l-2-2\"/><path d=\"M20 4v4h-4M4 20v-4h4\"/></svg><span>Flip to Side B</span></button>",
+      "css": ":host{--stock:#fcfbf7;--stock-deep:#f3f1ea;--rule:#dfe6f4;--ink:#1e3a8a;--ink-strong:#152c6b;--ink-soft:#4b63a6;--pencil:#5c6270;--stripe:#c62828;--on-ink:#fcfbf7;--hand:\"Inked\",\"Bradley Hand\",\"Segoe Print\",cursive;--read:\"Reader\",system-ui,-apple-system,\"Segoe UI\",sans-serif;}.ds-flip{display:inline-flex;align-items:center;gap:.6rem;cursor:pointer;font:400 1.3rem/1 var(--hand);text-transform:uppercase;letter-spacing:.06em;background:var(--ink);color:var(--on-ink);border:0;border-radius:5px;padding:.75rem 1.2rem .65rem;box-shadow:0 3px 10px -4px rgba(21,44,107,.55);transition:background-color 160ms ease-out,transform 160ms ease-out}.ds-flip:hover{background:var(--ink-strong);transform:translateY(-1px)}.ds-flip:focus-visible{outline:2px solid var(--ink-strong);outline-offset:3px}@media (prefers-reduced-motion:reduce){.ds-flip{transition:none}}"
+    },
+    {
+      "name": "Tag Label",
+      "kind": "chip",
+      "refersTo": "tag-label",
+      "description": "Toggleable tag filter on the index; one active at a time.",
+      "html": "<div class=\"ds-labels\"><button class=\"ds-label\" type=\"button\" aria-pressed=\"true\">#deployment</button><button class=\"ds-label\" type=\"button\" aria-pressed=\"false\">#config</button></div>",
+      "css": ":host{--stock:#fcfbf7;--stock-deep:#f3f1ea;--rule:#dfe6f4;--ink:#1e3a8a;--ink-strong:#152c6b;--ink-soft:#4b63a6;--pencil:#5c6270;--stripe:#c62828;--on-ink:#fcfbf7;--hand:\"Inked\",\"Bradley Hand\",\"Segoe Print\",cursive;--read:\"Reader\",system-ui,-apple-system,\"Segoe UI\",sans-serif;}.ds-labels{display:flex;flex-wrap:wrap;gap:.5rem}.ds-label{font:400 1.05rem/1 var(--hand);text-transform:uppercase;letter-spacing:.05em;color:var(--ink);background:transparent;border:1.5px solid var(--ink);border-radius:4px;padding:.42rem .7rem .34rem;cursor:pointer;transition:background-color 160ms ease-out,color 160ms ease-out}.ds-label:hover{background:var(--stock-deep)}.ds-label[aria-pressed=\"true\"]{background:var(--ink);color:var(--on-ink)}.ds-label:focus-visible{outline:2px solid var(--ink-strong);outline-offset:3px}"
+    },
+    {
+      "name": "Search Line",
+      "kind": "input",
+      "refersTo": "search-line",
+      "description": "Search as an inked line on the inlay; no box.",
+      "html": "<label class=\"ds-search\"><svg viewBox=\"0 0 24 24\" width=\"21\" height=\"21\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" aria-hidden=\"true\"><circle cx=\"10.5\" cy=\"10.5\" r=\"6.5\"/><path d=\"M15.5 15.5 21 21\"/></svg><input type=\"search\" placeholder=\"Search your tapes\" aria-label=\"Search lessons\"></label>",
+      "css": ":host{--stock:#fcfbf7;--stock-deep:#f3f1ea;--rule:#dfe6f4;--ink:#1e3a8a;--ink-strong:#152c6b;--ink-soft:#4b63a6;--pencil:#5c6270;--stripe:#c62828;--on-ink:#fcfbf7;--hand:\"Inked\",\"Bradley Hand\",\"Segoe Print\",cursive;--read:\"Reader\",system-ui,-apple-system,\"Segoe UI\",sans-serif;}.ds-search{position:relative;display:block;max-width:34rem}.ds-search svg{position:absolute;left:0;top:50%;translate:0 -50%;width:1.35rem;height:1.35rem;color:var(--ink-soft);pointer-events:none}.ds-search input{width:100%;border:0;border-bottom:2px solid var(--ink);background:transparent;color:var(--ink);font:400 1.4rem/2.4rem var(--hand);letter-spacing:.03em;padding:0 0 0 2rem;border-radius:0;caret-color:var(--ink-strong)}.ds-search input::placeholder{color:var(--pencil);text-transform:uppercase}.ds-search input:focus{outline:none;border-bottom-color:var(--ink-strong);box-shadow:0 2px 0 var(--ink-strong)}"
+    },
+    {
+      "name": "Spine Rail",
+      "kind": "nav",
+      "refersTo": "spine",
+      "description": "Fixed left rail: red stripe, the log title set vertically, A/B box.",
+      "html": "<aside class=\"ds-spine\"><div class=\"ds-spine__stripe\"><span></span><span></span></div><a class=\"ds-spine__title\" href=\"#\">Learning log</a><div class=\"ds-spine__sides\">A<br>B</div></aside>",
+      "css": ":host{--stock:#fcfbf7;--stock-deep:#f3f1ea;--rule:#dfe6f4;--ink:#1e3a8a;--ink-strong:#152c6b;--ink-soft:#4b63a6;--pencil:#5c6270;--stripe:#c62828;--on-ink:#fcfbf7;--hand:\"Inked\",\"Bradley Hand\",\"Segoe Print\",cursive;--read:\"Reader\",system-ui,-apple-system,\"Segoe UI\",sans-serif;}.ds-spine{width:3.75rem;height:22rem;border-right:2px solid var(--ink);background:var(--stock);display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:1rem 0}.ds-spine__title{writing-mode:vertical-rl;transform:rotate(180deg);font:400 1.6rem/1 var(--hand);letter-spacing:.06em;text-transform:uppercase;color:var(--ink);text-decoration:none;white-space:nowrap}.ds-spine__title:focus-visible{outline:2px solid var(--ink-strong);outline-offset:3px}.ds-spine__stripe{width:100%;display:grid;gap:4px}.ds-spine__stripe span{display:block;height:5px;background:var(--stripe)}.ds-spine__sides{font:400 1rem/1.1 var(--hand);color:var(--ink);text-align:center;border:1.5px solid var(--ink);border-radius:4px;padding:.3rem .45rem;width:2.4rem}"
+    },
+    {
+      "name": "Track",
+      "kind": "custom",
+      "refersTo": "track",
+      "description": "A lesson on the shelf: number, title, dotted leader, running time with review marks, question underneath.",
+      "html": "<a class=\"ds-track\" href=\"#\"><span class=\"ds-track__no\">02</span><span class=\"ds-track__title\">Retries need idempotency</span><span class=\"ds-track__lead\"></span><span class=\"ds-track__time\">Sept 9<span class=\"ds-marks\"><span class=\"ds-hit\"><svg viewBox=\"0 0 16 16\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3 8.5 6.5 12 13 4\"/></svg></span><span class=\"ds-sure\"><svg viewBox=\"0 0 16 16\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" aria-hidden=\"true\"><path d=\"M4 4l8 8M12 4l-8 8\"/></svg></span></span></span><span class=\"ds-track__q\">What goes wrong when you retry a payment that timed out?</span></a>",
+      "css": ":host{--stock:#fcfbf7;--stock-deep:#f3f1ea;--rule:#dfe6f4;--ink:#1e3a8a;--ink-strong:#152c6b;--ink-soft:#4b63a6;--pencil:#5c6270;--stripe:#c62828;--on-ink:#fcfbf7;--hand:\"Inked\",\"Bradley Hand\",\"Segoe Print\",cursive;--read:\"Reader\",system-ui,-apple-system,\"Segoe UI\",sans-serif;}.ds-track{display:grid;grid-template-columns:2.2rem auto 1fr auto;align-items:baseline;column-gap:.6rem;padding:.55rem .4rem .6rem;border-bottom:1px solid var(--rule);text-decoration:none;color:var(--ink);border-radius:4px;transition:background-color 160ms ease-out;font-family:var(--read)}.ds-track:hover{background:var(--stock-deep)}.ds-track:hover .ds-track__title{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.2em}.ds-track:focus-visible{outline:2px solid var(--ink-strong);outline-offset:3px}.ds-track__no{font:400 1.2rem/1 var(--hand);color:var(--ink-soft);font-variant-numeric:tabular-nums}.ds-track__title{font:400 1.5rem/1.2 var(--hand);text-transform:uppercase;letter-spacing:.03em}.ds-track__lead{border-bottom:2px dotted var(--ink-soft);transform:translateY(-.3rem);min-width:1.5rem}.ds-track__time{font:400 1.15rem/1 var(--hand);text-transform:uppercase;letter-spacing:.05em;font-variant-numeric:tabular-nums;white-space:nowrap;display:inline-flex;align-items:center;gap:.6rem}.ds-marks{display:inline-flex;gap:.15rem}.ds-hit{color:var(--ink);display:inline-flex}.ds-sure{color:var(--stripe);display:inline-flex}.ds-track__q{grid-column:2/5;margin-top:.15rem;color:var(--pencil);font-style:italic;font-size:.98rem;line-height:1.4}"
+    },
+    {
+      "name": "Side Head",
+      "kind": "custom",
+      "refersTo": "side-head",
+      "description": "A month on the shelf as a lettered side, with lesson count.",
+      "html": "<h2 class=\"ds-side\"><span class=\"ds-side__stamp\">A</span>September 2026<span class=\"ds-side__count\">3 lessons</span></h2>",
+      "css": ":host{--stock:#fcfbf7;--stock-deep:#f3f1ea;--rule:#dfe6f4;--ink:#1e3a8a;--ink-strong:#152c6b;--ink-soft:#4b63a6;--pencil:#5c6270;--stripe:#c62828;--on-ink:#fcfbf7;--hand:\"Inked\",\"Bradley Hand\",\"Segoe Print\",cursive;--read:\"Reader\",system-ui,-apple-system,\"Segoe UI\",sans-serif;}.ds-side{display:flex;align-items:center;gap:.8rem;border-bottom:2px solid var(--ink);padding-bottom:.3rem;margin:0;color:var(--ink);font:400 1.7rem/1.2 var(--hand);text-transform:uppercase;letter-spacing:.04em}.ds-side__stamp{display:inline-grid;place-items:center;width:2.2rem;height:2.2rem;border:2px solid var(--ink);border-radius:4px;font-size:1.5rem;line-height:1;padding-top:.12rem}.ds-side__count{margin-left:auto;font-size:1.15rem;color:var(--ink-soft)}"
+    },
+    {
+      "name": "J-Card Faces",
+      "kind": "card",
+      "refersTo": "jcard",
+      "description": "The unfolded j-card flap with red brand slashes, printed stripe, and Side A in pencil.",
+      "html": "<article class=\"ds-jcard\"><header class=\"ds-flap\"><h3>Build-time vs runtime settings</h3><div class=\"ds-brand\"><div class=\"ds-slashes\"><span></span><span></span><span></span></div><span class=\"ds-conf\">Felt 5/5 sure</span></div></header><div class=\"ds-stripe\"><span></span><span></span></div><div class=\"ds-deck\"><div class=\"ds-face\"><h4><span>Side A</span><span>I thought</span></h4><p>Every setting is read when the app is running.</p></div></div></article>",
+      "css": ":host{--stock:#fcfbf7;--stock-deep:#f3f1ea;--rule:#dfe6f4;--ink:#1e3a8a;--ink-strong:#152c6b;--ink-soft:#4b63a6;--pencil:#5c6270;--stripe:#c62828;--on-ink:#fcfbf7;--hand:\"Inked\",\"Bradley Hand\",\"Segoe Print\",cursive;--read:\"Reader\",system-ui,-apple-system,\"Segoe UI\",sans-serif;}.ds-jcard{max-width:40rem;border:2px solid var(--ink);border-radius:8px;background:var(--stock);color:var(--ink);overflow:hidden}.ds-flap{display:grid;grid-template-columns:1fr auto;gap:1rem;padding:1.6rem 1.8rem 1.3rem}.ds-flap h3{font:400 2.4rem/.98 var(--hand);text-transform:uppercase;letter-spacing:.01em;margin:0}.ds-brand{display:grid;justify-items:end;gap:.45rem;align-content:start}.ds-slashes{display:flex;gap:5px;transform:skewX(-20deg)}.ds-slashes span{width:6px;height:2.6rem;background:var(--stripe);border-radius:1px}.ds-conf{font:400 1.2rem/1 var(--hand);color:var(--stripe);letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}.ds-stripe{display:grid;gap:3px}.ds-stripe span{display:block;height:4px;background:var(--stripe)}.ds-deck{padding:1.4rem 1.8rem}.ds-face{border:1.5px solid var(--ink);border-radius:6px;padding:1.1rem 1.3rem 1.2rem;background:var(--stock);color:var(--pencil)}.ds-face h4{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1.5px solid currentColor;margin:0 0 .8rem;padding-bottom:.2rem;font:400 1.45rem/1.2 var(--hand);text-transform:uppercase;letter-spacing:.05em}.ds-face p{margin:0;font:italic 400 1.2rem/1.6 var(--read)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Inked J-Card",
+    "overview": "Every lesson is a cassette inlay card the learner lettered themselves. The page is lined inlay stock: warm white paper with pale-blue rules every 1.75rem, drawn by a repeating gradient on the body. Titles, heads, dates and labels are hand-lettered capitals in ballpoint blue; sentences are set in a plain, highly legible sans so the learner's own words read easily. One red printed stripe is the only colour that is not ink, and it only ever means the tape's brand or how sure the learner felt.\n\nThe structure borrows from the tape itself. A fixed spine rail down the left edge carries the log's title set vertically, with the red stripe at its head and an A/B box at its foot. The index is a shelf of sides: each month is a side with a lettered stamp, and each lesson is a numbered track with a dotted leader running out to its date and review marks. An entry page is the unfolded j-card: a bordered card with its own spine, a front flap carrying the title and red confidence slashes, then Side A (\"I thought\") in pencil with a Flip control that turns the card on its y-axis to Side B (\"Actually\") in ink.\n\nNight mode is the same card under a desk lamp: ink-navy stock, faded-blue ink, a softer coral stripe. Nothing else changes. Print drops the spine, the finder and the flip, and lays both sides out flat.",
+    "keyCharacteristics": [
+      "Ruled stock: body line-height equals the rule pitch (1.75rem), so running text sits on the lines.",
+      "Two pens: a hand-lettered uppercase display voice (Patrick Hand) and a legible reading voice (Atkinson Hyperlegible).",
+      "Ink blue for what's settled, pencil gray for what was only thought, red for confidence.",
+      "Strokes, not shadows: depth comes from ink borders, rules, dotted leaders and dashed boxes.",
+      "The side flip: a 650ms y-axis card turn that doubles as a self-quiz and unseals \"In my words\"."
+    ],
+    "rules": [
+      {
+        "name": "The One Red Rule",
+        "body": "Red is the only non-ink colour. It marks the tape's brand stripe and the learner's confidence, and nothing else: never a link, never a hover, never decoration.",
+        "section": "colors"
+      },
+      {
+        "name": "The Pencil-Before-Ink Rule",
+        "body": "What the learner only thought is written in pencil gray (and italic in running text); what is actually true is written in ink. Side A and Side B must never share a colour.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Pens Rule",
+        "body": "The hand is always weight 400 and almost always uppercase; it is never bolded. Emphasis inside the hand is a colour shift to pressed ink (as in the tally numbers), not a heavier weight. Sentences are always in the reading face.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Running Time Rule",
+        "body": "Track numbers, dates and review counts use tabular numerals so the right-hand margin lines up like running times on a j-card.",
+        "section": "typography"
+      },
+      {
+        "name": "The Ruled Stock Rule",
+        "body": "The page background is ruled at the body line-height (1.75rem). Change one and you must change the other.",
+        "section": "layout"
+      },
+      {
+        "name": "The Shelf, Not Grid Rule",
+        "body": "Lessons are a stacked tracklist grouped into sides, never a grid of cards.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat Inlay Rule",
+        "body": "Surfaces are paper and never float. Only the primary action on a card is lifted.",
+        "section": "elevation & depth"
+      },
+      {
+        "name": "The Stroke Ladder Rule",
+        "body": "2px ink is structure, 1.5px ink is a box inside it, 1px rule is a divider, dotted is a leader, dashed is a question. Don't mix those meanings.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "**Do** keep running text on the rules: body at 1.0625rem on a 1.75rem line, the same pitch as the ruled background.",
+      "**Do** letter every title, head, label and date in the hand, uppercase, weight 400; use pressed ink for emphasis.",
+      "**Do** put what the learner thought in pencil and what's true in ink, on separate faces of the same card.",
+      "**Do** reserve red for the brand stripe and for confidence, including \"felt sure, wasn't\" misses, so misses show as plainly as hits.",
+      "**Do** draw depth with the stroke ladder (2px, 1.5px, 1px, dotted, dashed) rather than shadows.",
+      "**Do** give every motion a reduced-motion path that is an instant swap."
+    ],
+    "donts": [
+      "**Don't** lay lessons out as a blog-style grid of cards; they are tracks on a side.",
+      "**Don't** introduce a second accent hue, or use red for links, hovers or decoration.",
+      "**Don't** bold or set the hand in lowercase for labels; the quote is its one mixed-case use.",
+      "**Don't** add shadows to cards, faces or labels; only the Flip button lifts.",
+      "**Don't** change the body line-height without changing the rule pitch, or the text slips off the lines."
+    ]
+  }
+}

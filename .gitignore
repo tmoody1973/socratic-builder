@@ -1,3 +1,6 @@
 .DS_Store
 *.bak-*
 skill/profile.md
+skill/profile.md.*
+.impeccable/review/
+examples/site/

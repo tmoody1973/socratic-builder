@@ -1,40 +1,16 @@
 ---
-description: Show recent learning-log entries and surface one recurring pattern.
-argument-hint: [optional: number, #tag, date range, or text to grep]
+description: Review your learning journal. Due recall questions, recent entries, one recurring pattern, and how well your confidence matches your answers.
+argument-hint: [optional: number, #tag, or text to search]
 ---
 
-Show recent entries from the learning log and surface one recurring pattern.
+Read the learning journal (`Journal path` in `~/.claude/skills/socratic-builder/profile.md`, else `~/.claude/journal/learning-log.md`). If it's missing or empty: "No journal yet. Entries get logged automatically as you learn things." Stop there.
 
-## File location
+Show, in the learner's explanation style, in this order:
 
-Default: `~/.claude/journal/learning-log.md`. Use the configured path if different.
+1. **Due now** (up to 3, most overdue first): ask the first one's recall question and wait. After the answer, give one line of feedback and update its `Review` line per the skill's spaced-review rules. Offer the next due one; stop if they say so.
+2. **Recent entries:** by default the 5 newest; with `$ARGUMENTS`, a number (that many), a `#tag` (matching entries) or text (entries containing it). Show each as title + "Actually" + "In my words".
+3. **Drafts waiting:** list titles still missing "In my words", if any, with one line: "Add your sentence to any of these?"
+4. **One pattern:** a concept that recurs, a tag cluster forming, or "no clear pattern yet". One sentence; don't manufacture insight.
+5. **Confidence vs correct:** from the `✓N`/`✗N` history marks, report how often answers given at high confidence (4–5) were right, and flag any ✗4 or ✗5 as "felt sure, wasn't". One or two lines. If there's too little history, say "Not enough reviews yet to judge."
 
-If the file doesn't exist or is empty: `No journal yet — run /socratic-log after your next session to start one.` Stop there.
-
-## Argument handling
-
-`$ARGUMENTS` can be one of:
-
-- **A number** (`10`) → show that many most-recent entries
-- **A tag** (`#convex`, `#deployment`) → filter entries containing that tag, show all matches
-- **A date range** (`last week`, `this month`, `since May 1`) → filter by entry date
-- **Plain text** (`env vars`, `auth`) → grep entries for that text, show matches
-- **Empty** → default to the 5 most recent entries
-
-## Output format
-
-For each entry, show the full markdown block (preserve formatting). Newest first. After the entries, add one section:
-
-```markdown
----
-### Pattern noticed
-
-[One sentence. Either a concept that recurs across multiple entries ("You've hit Fly.io env vars 3 times in the last month — worth a deeper dive on the build-time vs runtime model?") OR a tag cluster you didn't realize was forming ("4 entries tagged #convex-functions but none on schema design — gap?") OR an honest "no clear pattern yet, just observations."]
-```
-
-## Rules
-
-- One pattern, not a list. The skill that makes this useful is noticing the *most relevant* pattern, not cataloging all of them.
-- Don't manufacture insight. If there genuinely isn't a pattern yet, say so. Five entries on five unrelated topics is just five entries.
-- Don't editorialize on the entries themselves. The user wrote those receipts for a reason; surface them clean.
-- If a pattern suggests a follow-up action (revisit a concept, write a blog post on the recurring theme, build a snippet), offer it as one line after the pattern. No more than one offer.
+Offer at most one follow-up action (for example: revisit a concept, or run /socratic-site).
