@@ -156,6 +156,40 @@ It then asks whether to register the **spaced-review hook**, a small script Clau
 
 **4. Check it works.** In a new session, ask for help with something small. Claude should ask for a guess before showing code. Run `/socratic-status` to confirm the commands loaded.
 
+## Using it on a project
+
+The skill is global: once installed, it works in every project you open in Claude Code. There's nothing to set up per project.
+
+### Starting a new project
+
+1. **Add a tag for it.** Put the project name in your profile's `Project tags` line (for example `#newsdesk`), or say "add #newsdesk to my project tags". Journal entries from this project can then be grouped under it.
+2. **Build as usual.** Describe what you want. On topics you marked **new**, Claude shows a short worked example first (often the change it just made), then asks you one question. On **familiar** topics it asks you to guess before it shows. On **fluent** topics it stays out of the way.
+3. **Slow down for the load-bearing parts.** When the project reaches something everything else will rest on, like the data model, logins or how it's deployed, ask for a deep dive: "Let's do a deep dive on the data model before we build it."
+
+### Joining an existing project
+
+Understand what's there before you change it:
+
+- "Walk me through how this project is put together. Ask me to guess first."
+- "Before you change the checkout code, what could this break? Let me guess first."
+- "Deep dive on how logins work in this codebase."
+
+Claude asks one question at a time and fits the explanation to your topic levels. Anything that lands becomes a journal draft.
+
+### A normal session
+
+- **At the start:** if a lesson is due, Claude asks you its recall question once. Answer it, or say "skip".
+- **While building:** expect about one quick question per change (fewer if your budget is "light"). A wrong guess is fine; it still helps you learn.
+- **When you just need it done:** say "just do it" or "I'm in a hurry" and Claude builds without questions.
+- **When you're lost:** say "simpler". When it's too basic: "more technical" or "push harder".
+- **At the end:** `/socratic-review` shows what's due, what you logged, and one pattern in your mistakes.
+
+### Your first week
+
+- Leave the defaults alone for a few sessions before tuning anything.
+- Add your one-sentence "In my words" line to each draft within a day or two, while it's fresh. `/socratic-review` lists drafts that still need it.
+- After a week, run `/socratic-profile update` and adjust anything that felt too slow or too easy.
+
 ## Improving it
 
 This repo is the live copy, so the loop is short:
