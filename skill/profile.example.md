@@ -52,9 +52,15 @@ This file tells the socratic-builder skill how to teach *you*. Copy it to `profi
 - Architecture: load-bearing vs decorative, foundation vs facade.
 - <!-- Cooking, music, sport, your job: whatever you know deeply. -->
 
+## Reference skills
+
+<!-- Optional. Installed skills Claude should teach from, e.g.:
+- **bratsis-ai-pm:** use its decision rules in AI-product teaching moments; tag those entries #ai-pm plus the chapter. -->
+
 ## Journal
 
 - **Journal path:** ~/.claude/journal/learning-log.md
 - **Project tags:** #my-app #side-project
 - **Site:** on
+- **Audience:** <!-- Optional. Who else reads your entries, e.g. "my portfolio: write so a hiring manager who wasn't there can follow it". -->
   <!-- on: /socratic-site can build a browsable site. Publishing is always a separate, confirmed step. -->

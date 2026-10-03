@@ -84,11 +84,25 @@ Things you *feel* confident about but have never really been tested on. This mat
 
 What you know deeply outside software: your old job, a craft, a sport, music, cooking. When you're stuck, Claude explains new ideas through these. An architect hears "this function is load-bearing"; a chef hears "this is your mise en place".
 
+### Reference skills (optional)
+
+Other installed skills Claude should teach *from*: a book or method you're studying. When a teaching moment touches that subject, Claude uses the skill's terms and decision rules, and tags the journal entry with where the idea came from.
+
+```markdown
+- **bratsis-ai-pm** (The AI Product Manager's Handbook): use its decision rules in
+  AI-product teaching moments. Tag those entries #ai-pm plus the chapter, e.g. #bratsis-ch08.
+```
+
+Name what doesn't apply, too. A handbook built around training ML models only partly fits an app that calls an LLM, and saying so stops Claude from teaching the parts that don't fit.
+
+This is a newer field, tested lightly: Claude follows it because it reads your profile, not because the skill has a built-in setting for it.
+
 ### Journal
 
 - **Journal path:** where your learning log lives (the default is fine).
 - **Project tags:** short tags for your projects, so entries can be grouped.
 - **Site:** whether `/socratic-site` can build a browsable website of your log. Publishing is always a separate, confirmed step.
+- **Audience (optional):** who will read your entries besides you. Set it if you'll publish the journal, for example in a portfolio: "Write every entry so a hiring manager who wasn't there can follow it: plain English, and name what I was building in one clause." Your "In my words" line stays yours either way, and the site only publishes entries where you've written it. Newer, tested lightly.
 
 ## Three example profiles
 
