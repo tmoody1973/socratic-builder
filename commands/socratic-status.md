@@ -13,4 +13,4 @@ Journal today:     [drafts logged this session: titles, or "none"]
 Reviews:           [due count from the journal, or "none due"]
 ```
 
-Rules: be honest about Mode (if /socratic-off ran, say Off). "Between tasks" is usually the honest phase. If a draft is missing "In my words", add one line after the block: "Add your sentence to <title>?" Otherwise no offer.
+Rules: if the session state file exists, read it first; it is the record that survives compaction. Be honest about Mode (if /socratic-off ran, say Off). "Between tasks" is usually the honest phase. If a draft is missing "In my words", add one line after the block: "Add your sentence to <title>?" Otherwise no offer.

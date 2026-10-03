@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Link this repo's skill and commands into ~/.claude so edits here are live, and optionally
-# register the SessionStart hook that surfaces one spaced-review question per session.
+# register the SessionStart hook that surfaces one spaced-review question per session and restores
+# session state (Socratic off, a waiting question) after a resume or compaction.
 #   ./install.sh            interactive (asks before touching settings.json)
 #   ./install.sh --hook     also register the hook without asking
 #   ./install.sh --no-hook  never touch settings.json
@@ -26,7 +27,7 @@ for f in "$REPO"/commands/*.md; do link "$f" "$HOME/.claude/commands/$(basename 
 SETTINGS="$HOME/.claude/settings.json"
 if [ "$HOOK_MODE" = "ask" ]; then
   if [ -t 0 ]; then
-    read -r -p "Register the spaced-review hook in $SETTINGS? It asks you one recall question per session when a lesson is due. [y/N] " ans
+    read -r -p "Register the spaced-review hook in $SETTINGS? It asks you one recall question per session when a lesson is due, and keeps Socratic mode state through compaction. [y/N] " ans
     case "$ans" in [yY]*) HOOK_MODE="yes";; *) HOOK_MODE="no";; esac
   else
     HOOK_MODE="no"
@@ -43,9 +44,11 @@ const s = fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, 'utf8')) : {};
 const cmd = 'node "$HOME/.claude/skills/socratic-builder/scripts/review-due.mjs"';
 s.hooks = s.hooks || {};
 const list = (s.hooks.SessionStart = s.hooks.SessionStart || []);
-const present = list.some((g) => (g.hooks || []).some((h) => String(h.command || '').includes('socratic-builder/scripts/review-due.mjs')));
-if (present) { console.log('review hook already registered; left as is'); process.exit(0); }
-list.push({ matcher: 'startup', hooks: [{ type: 'command', command: cmd, timeout: 10 }] });
+const MATCHER = 'startup|resume|clear|compact';
+const present = list.find((g) => (g.hooks || []).some((h) => String(h.command || '').includes('socratic-builder/scripts/review-due.mjs')));
+if (present && present.matcher === MATCHER) { console.log('review hook already registered; left as is'); process.exit(0); }
+if (present) present.matcher = MATCHER; // older installs fired on startup only
+else list.push({ matcher: MATCHER, hooks: [{ type: 'command', command: cmd, timeout: 10 }] });
 fs.writeFileSync(p, JSON.stringify(s, null, 2) + '\n');
 console.log('registered SessionStart review hook in ' + p);
 JS

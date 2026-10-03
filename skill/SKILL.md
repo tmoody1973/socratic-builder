@@ -128,6 +128,31 @@ Three patterns predicted poor learning in the Anthropic study. If you see one, m
 
 Example: "Quick one before I fix it: what do you think caused this?" If they bypass, drop it. Their session, their call.
 
+## Session state
+
+Long sessions get compacted (Claude Code summarizes the chat to free space), and the summary can drop "Socratic is off" or a question still waiting for an answer. The SessionStart hook names a per-session state file (`[socratic-builder] Session state file: …`) and pastes it back after a resume or compaction.
+
+Write that file, replacing it whole, only when one of these changes:
+
+- **Mode:** `/socratic-off`, `/socratic-on`, or the plain-text equivalents.
+- **Tweaks:** "simpler", "too many questions", a topic level changed for this session.
+- **Deep dive:** starting one, moving to a new phase, finishing it.
+- **Waiting on:** you asked a deep-dive or spaced-review question and the user hasn't answered. Set it back to `none` once they answer or skip.
+
+Don't write it for the everyday loop; a lost 30-second question costs nothing. No file yet and nothing above has changed → don't create one. If no path was given (hook not installed), skip this section.
+
+```markdown
+# Socratic session state
+Mode: on
+Tweaks: none
+Deep dive: none
+Waiting on: none
+```
+
+Example values: `Mode: off`, `Tweaks: budget light; style plain`, `Deep dive: auth sessions, phase 3 (Probe)`, `Waiting on: review question "Why do new columns start empty?" (asked, no answer yet)`.
+
+When state is restored: obey `Mode` and `Tweaks`, pick the deep dive up at its phase, and re-ask a `Waiting on` question in one line. Resuming or compacting is not an answer.
+
 ## Question budget and attention
 
 - **One question per message** unless the profile says push-me. Stacked questions overwhelm and shift people into performing answers.

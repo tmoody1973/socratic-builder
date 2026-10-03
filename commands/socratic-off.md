@@ -11,4 +11,6 @@ Socratic mode re-engages when:
 - They start a new Claude Code session
 - They say "Socratic on" or "back to Socratic" in plain text
 
+Record `Mode: off` in the session state file if the hook named one (see the skill's "Session state"), so it survives compaction.
+
 Do not log this state change in the learning journal — a bypass is not a lesson.
