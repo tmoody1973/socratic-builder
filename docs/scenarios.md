@@ -6,15 +6,15 @@ Run them after changing `SKILL.md`, a command, or the hook. You don't need all t
 
 ## Setup
 
-Use a throwaway project and a throwaway journal, so test lessons never land in your real one:
+Use a throwaway project. Start every scenario from an empty folder, including the `.remember/` notes another plugin may leave behind; otherwise Claude remembers the previous run ("my notes say I built a notes.js earlier today"):
 
 ```sh
-mkdir -p /tmp/sb-scenarios && cd /tmp/sb-scenarios && git init -q
-export SOCRATIC_JOURNAL=/tmp/sb-scenarios/journal.md
-claude
+mkdir -p /tmp/sb-scenarios && cd /tmp/sb-scenarios
+rm -rf notes.js notes.json .remember .git && git init -q
+SOCRATIC_JOURNAL=/tmp/sb-scenarios/journal.md claude
 ```
 
-The hook reads `SOCRATIC_JOURNAL`, so it has to be set in the same terminal that starts `claude`. Your profile is still the real one in `skill/profile.md`; note its role, goal and question budget in the results log, because they change what "pass" looks like.
+`SOCRATIC_JOURNAL` only redirects the startup hook (scenario 10's review question). When Claude *writes* an entry (scenario 9), it uses the journal path in `profile.md`, which is your real journal. A lesson from a test is still a real lesson; delete the entry if you don't want it. Your profile is still the real one in `skill/profile.md`; note its role, goal and question budget in the results log, because they change what "pass" looks like.
 
 A good first request for most scenarios: *"Build a tiny command-line notes app in Node that saves notes to a JSON file."*
 
@@ -63,3 +63,4 @@ Record each run: the date, Claude Code version, which scenarios ran, and the res
 - **2026-10-03:** profile AI director · understand-to-verify · plain · light. Scenario 4 partly verified in real sessions. After `/socratic-off` and `/compact`, the hook restored `Mode: off` in the same session (log line 128) and `/socratic-status` reported Off. A build request after compaction was not tried. Scenarios 1–3 and 5–10 not run.
 - **2026-10-03, scenario 1: fail.** Session `414ea79e`. The hook's "read SKILL.md before the first non-trivial build step" line reached Claude (present in the log), but Claude never read the skill, built the whole notes app, and said it "skipped the question-and-answer teaching steps because this was a small build." The word "non-trivial" left the call to Claude, which never saw the skill's own definition of trivial (typos, renames, formatting, boilerplate). 13 SessionStart hooks added context to that session.
 - **2026-10-03, scenario 1 rerun after the hook wording fix: partial pass.** Session `347d469d`. Claude's first action was reading `SKILL.md`, then `profile.md`. Whether it then teaches could not be judged: the previous run's `notes.js` was still in the folder, so Claude tested it instead of building. Rerun from an empty folder.
+- **2026-10-03, scenario 1 clean rerun: pass.** Session `dd553547`. Read `SKILL.md` before writing code, then `profile.md`. Taught to the profile: framed its own test run as a worked example (testing is "new"), one question after the build (light budget) aimed at learning goal 2, an architecture metaphor, plain wording. No prediction question before building, which the skill allows for a new topic; scenario 2 tests the predict step. Setup flaw found: a `.remember/` folder from another plugin carried the previous run's memory into this one; setup now clears it.
