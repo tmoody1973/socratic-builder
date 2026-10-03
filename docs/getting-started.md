@@ -104,7 +104,69 @@ Each entry has one line left blank: **"In my words"**. Fill it in with one sente
 
 The next day, at the start of a session, Claude asks you that lesson's recall question once. Get it right and it comes back in a week, then a month, then three months. Get it wrong and it comes back tomorrow. You'll also be asked how sure you felt, from 1 to 5. Over time, "felt sure but was wrong" shows you where your blind spots are.
 
-Want a website of what you've learned? Run `/socratic-site`. It only includes entries where you've written your own sentence.
+## Your journal website
+
+Your journal can become a small website you can browse, study from, or share, for example as part of a portfolio. It's designed like the paper insert of a cassette tape:
+
+- **The home page** lists your lessons like songs on a tape, grouped by month, with search and tag filters.
+- **Each lesson is a card.** You see the recall question first. Answer it in your head, then **flip** the card to see the answer and your own words. It doubles as a study tool.
+- **A calibration page** compares how sure you felt with how often you were right.
+
+It works offline, on phones, and in light or dark mode. Nothing to install.
+
+### See an example first
+
+Your site stays empty until you've finished at least one lesson, so look at the sample first. In Terminal, from the `socratic-builder` folder:
+
+```bash
+node skill/scripts/build-site.mjs --journal examples/sample-journal.md --out examples/site
+open examples/site/index.html
+```
+
+That builds the site from six example lessons and opens it in your browser. (`open` is the Mac command; on Linux use `xdg-open`.)
+
+### Build your own
+
+In Claude Code, type:
+
+```text
+/socratic-site
+```
+
+Claude builds the site from your journal and tells you how many lessons went in and how many were left out. Then it offers to open it. The site lives on your computer at `~/.claude/journal/site/index.html`. Nobody else can see it.
+
+**Why is my site empty?** Only finished lessons go on the site. A lesson is finished once you've written its "In my words" sentence. Drafts are always left out. So are lessons you mark private (see below). Fill in one sentence, run `/socratic-site` again, and it appears.
+
+### Put it online (optional)
+
+You need a free GitHub account and the GitHub command-line tool, `gh`. Install it from [cli.github.com](https://cli.github.com), then run `gh auth login` once and follow the prompts.
+
+Then, in Claude Code:
+
+```text
+/socratic-site publish
+```
+
+Claude walks you through it and **asks before anything goes public**:
+
+1. It lists every lesson title that would be published, and asks if you want to keep any private first.
+2. It asks where to publish. The default is a new public repository called `learning-log` on your GitHub account, separate from all your code projects.
+3. Only after you say yes, it uploads the site and turns on GitHub Pages, GitHub's free website hosting.
+4. It gives you the address, like `https://your-name.github.io/learning-log/`. The first time, it can take a minute or two to appear.
+
+To update the site later, run `/socratic-site publish` again. It shows the list and asks again every time.
+
+Treat publishing as permanent. Even if you delete something later, copies may already be saved by search engines.
+
+### Keep a lesson off the site
+
+Open `~/.claude/journal/learning-log.md`, find the lesson, and change its status line to:
+
+```markdown
+- **Status:** private
+```
+
+Private lessons still come back for review. They just never go on the site.
 
 ## Your first week
 
@@ -121,5 +183,5 @@ Want a website of what you've learned? Run `/socratic-site`. It only includes en
 
 ## Where to go next
 
-- [`profile-guide.md`](profile-guide.md): every profile setting explained, with example profiles.
+- [`profile-guide.md`](profile-guide.md): every profile setting explained, with example profiles. Set its journal **Audience** line if you'll publish your site, so entries are written for readers who weren't there.
 - [`../README.md`](../README.md): the full picture, including the research behind the method and how to uninstall.
