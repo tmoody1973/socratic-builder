@@ -196,7 +196,7 @@ This repo is the live copy, so the loop is short:
 
 1. Edit `skill/SKILL.md`, a file in `commands/`, or the site in `skill/site/` and `skill/scripts/build-site.mjs`.
 2. Start a new Claude Code session to try it, or rebuild the sample site.
-3. If you touched `skill/scripts/review-due.mjs`, run `node --test tests/`.
+3. If you touched `skill/scripts/review-due.mjs`, run `node --test tests/`. If you changed how the skill behaves, run the matching checks in [`docs/scenarios.md`](docs/scenarios.md).
 4. Commit and push.
 
 Personal tuning belongs in your git-ignored `skill/profile.md`. Changes to the method belong in `SKILL.md`. If you add a bypass phrase, update both `SKILL.md` and the rule in your CLAUDE.md.
