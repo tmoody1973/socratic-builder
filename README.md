@@ -6,6 +6,8 @@ When AI writes the code, you can ship faster than you understand what you shippe
 
 It works for everyone from people who never read code ("vibe coders") to senior engineers. Your profile decides how it talks to you and how hard it pushes.
 
+**New to this?** Start with [Getting started](docs/getting-started.md): setup, a real first session, and what to do in week one, in plain English.
+
 ## Why it works this way
 
 Three findings shaped the design ([evidence in the skill](skill/SKILL.md#evidence)):
@@ -154,9 +156,9 @@ It then asks whether to register the **spaced-review hook**, a small script Clau
 
 **2. Make your profile.** Start Claude Code and run `/socratic-profile`.
 
-**3. Make it always on.** Claude Code loads a skill when a request matches its description. To make the teaching loop the default for every non-trivial build, add the rule from [`skill/SKILL.md`](skill/SKILL.md) (section "Teaching Mode: Socratic Building") to your `~/.claude/CLAUDE.md`. Or say "install the socratic-builder skill" and Claude walks you through it. It flags conflicting rules and backs the file up first.
+**3. Optional: add the CLAUDE.md rule.** The review hook already tells Claude to read the skill at the start of every session. Without the hook, Claude rarely chose to load the skill on its own (once in 38 working sessions, [decision 006](docs/decisions/006-hook-points-to-skill.md)). The rule from [`skill/SKILL.md`](skill/SKILL.md) (section "Teaching Mode: Socratic Building") in your `~/.claude/CLAUDE.md` adds a standing reminder; it isn't enough on its own. Say "install the socratic-builder skill" and Claude walks you through it, flagging conflicting rules and backing the file up first.
 
-**4. Check it works.** In a new session, ask for help with something small. Claude should ask for a guess before showing code. Run `/socratic-status` to confirm the commands loaded.
+**4. Check it works.** In a new session, ask for help building something small. Before writing code, Claude should read the skill (you'll see a `Read` of `SKILL.md`). Then it either asks one question or, on topics you marked new, shows a short example first. Run `/socratic-status` to confirm the commands loaded.
 
 ## Using it on a project
 
