@@ -82,3 +82,16 @@ test('missing or broken event input still runs the startup path', () => {
   assert.equal(res.status, 0);
   assert.match(run({}).stdout, /spaced-review question is due/);
 });
+
+test('startup points Claude at SKILL.md so teaching does not depend on Claude picking the skill', () => {
+  const { run } = setup();
+  assert.match(run({ session_id: 'abc', source: 'startup' }).stdout, /Read .*SKILL\.md/);
+});
+
+test('compact repeats the SKILL.md pointer when on, drops it when the session is off', () => {
+  const { run, stateFile } = setup();
+  writeFileSync(stateFile('on'), '# Socratic session state\nMode: on\n');
+  writeFileSync(stateFile('off'), '# Socratic session state\nMode: off\n');
+  assert.match(run({ session_id: 'on', source: 'compact' }).stdout, /Read .*SKILL\.md/);
+  assert.doesNotMatch(run({ session_id: 'off', source: 'compact' }).stdout, /Read .*SKILL\.md/);
+});

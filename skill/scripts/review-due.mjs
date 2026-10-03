@@ -8,13 +8,18 @@
 // Never throws: a broken journal or state file must not break startup.
 import { readFileSync, existsSync, readdirSync, statSync, unlinkSync } from 'node:fs';
 import { homedir } from 'node:os';
-import { join } from 'node:path';
+import { join, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const JOURNAL = process.env.SOCRATIC_JOURNAL || join(homedir(), '.claude', 'journal', 'learning-log.md');
 const STATE_DIR = process.env.SOCRATIC_STATE_DIR || join(homedir(), '.claude', 'socratic-builder', 'sessions');
 const today = (process.env.SOCRATIC_TODAY || new Date().toISOString().slice(0, 10));
 const MAX_STATE_CHARS = 2000; // state is a few lines; anything bigger is not ours to paste back
 const PRUNE_DAYS = 14;
+const SKILL = join(dirname(fileURLToPath(import.meta.url)), '..', 'SKILL.md');
+// Claude almost never chose to load the skill on its own (1 of 38 working sessions, Sept 2026),
+// and the journal rules live only in SKILL.md. So the hook names the file instead of waiting.
+const SKILL_LINE = `[socratic-builder] Socratic mode is on. Before the first non-trivial build, debug or design step, Read ${SKILL} and follow it (bypass phrases still apply; skip the Read if it is already in context).`;
 
 function readEvent() {
   if (process.stdin.isTTY) return {};
@@ -84,11 +89,12 @@ try {
         state
       );
     }
+    if (!/^Mode:\s*off\b/im.test(lines.join('\n'))) lines.push(SKILL_LINE);
     if (pathLine) lines.push(pathLine);
   } else {
     if (statePath && existsSync(statePath)) unlinkSync(statePath); // a fresh start or /clear starts clean
     pruneOldState();
-    lines.push(...journalLines());
+    lines.push(SKILL_LINE, ...journalLines());
     if (pathLine) lines.push(pathLine);
   }
   if (lines.length) process.stdout.write(lines.join('\n') + '\n');
