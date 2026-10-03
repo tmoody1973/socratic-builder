@@ -28,7 +28,7 @@ What it asks about depends on your **goal**:
 |---|---|---|
 | Understand to check | People who direct AI | What the change does, what could go wrong, how you'd check it. It never asks you to write code. |
 | Write it myself | People learning to code | Your approach first. Claude reviews what you write, and gives hints before code. |
-| Go deeper | Experienced engineers | Trade-offs, failure at scale, the option you didn't pick |
+| Go deeper | Experienced engineers, or anyone building product judgment | Trade-offs, failure at scale, the option you didn't pick |
 
 For big or confusing problems there's a longer **deep dive** in five steps: frame the problem, surface what you think, test where your idea breaks, bridge the gap, and check it stuck. When you're stuck, Claude gives the smallest hint that unblocks you, then bigger ones only if needed.
 
@@ -91,7 +91,9 @@ A small script runs when a Claude Code session starts. If a lesson is due, Claud
 - **Right:** it comes back later: 1 day, then 7, then 30, then 90. After that it's retired.
 - **Wrong:** it goes back to 1 day.
 
-Nothing is due? The script stays silent. It also reminds you when drafts are missing their "In my words" line.
+It also reminds you when drafts are missing their "In my words" line.
+
+The same script does two more jobs. At the start of every session it tells Claude to read the skill before writing code, because left to choose, Claude rarely loaded it (once in 38 working sessions; see [decision 006](docs/decisions/006-hook-points-to-skill.md)). And when a long session is compacted (Claude Code summarizes the chat to free up space), it hands back whether Socratic was off and any question you hadn't answered yet ([decision 005](docs/decisions/005-session-state-survives-compaction.md)).
 
 ### It tracks how sure you were
 
