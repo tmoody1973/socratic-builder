@@ -19,7 +19,9 @@ const PRUNE_DAYS = 14;
 const SKILL = join(dirname(fileURLToPath(import.meta.url)), '..', 'SKILL.md');
 // Claude almost never chose to load the skill on its own (1 of 38 working sessions, Sept 2026),
 // and the journal rules live only in SKILL.md. So the hook names the file instead of waiting.
-const SKILL_LINE = `[socratic-builder] Socratic mode is on. Before the first non-trivial build, debug or design step, Read ${SKILL} and follow it (bypass phrases still apply; skip the Read if it is already in context).`;
+// "Non-trivial" alone let Claude call a whole new app "a small build" (scenario 1, 2026-10-03), so the
+// line spells out the skill's own definition of trivial.
+const SKILL_LINE = `[socratic-builder] Socratic mode is on. Before writing or changing code, or designing or debugging with the user, Read ${SKILL} and follow it. Skip only for typos, renames, formatting or boilerplate; a new feature or app is never trivial. Bypass phrases still apply. Skip the Read if the skill is already in context.`;
 
 function readEvent() {
   if (process.stdin.isTTY) return {};
